@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        function calc(){
+            var n1=parseInt(document.getElementById('f_value').value);
+            var n2=parseInt(document.getElementById('s_value').value);
+            var oper=document.getElementById('operators').value;
+            if(oper==='+'){
+                document.getElementById('result').value=n1+n2;
+            }
+            if(oper==='-'){
+                document.getElementById('result').value=n1-n2;
+            }
+            if(oper==='*'){
+                document.getElementById('result').value=n1*n2;
+            }
+            if(oper==='/'){
+                document.getElementById('result').value=n1/n2;
+            }
+        }
+        </script>
+        <style>
+body{
+    text-align: center;
+    color:aliceblue;
+    display: block;
+      
+    border: 1pt; 
+}
+button{
+    height: 20px;
+    width: 40px;
+    color: black ;
+    font-weight:bold;
+    
+}
+.container{
+    border: 10px black solid;
+    color:white;
+    background-color:darkolivegreen; 
+    padding: 15px;
+    
+}
+#operators{
+    font-size: 30px ;
+    width: 50;
+    height: 25;
+
+}
+
+        </style>
+</head>
+<body>
+<div class="container">
+    <label>ENTER FIRST VALUE: </label><br>
+    <input type="text" id="f_value" name=""><br><br>
+    <label>ENTER SECOND VALUE: </label><br>
+    <input type="text" id="s_value" name=""><br><br>
+    <select id="operators">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+    </select>
+<br><br>
+    <label>RESULT:  </label><br>
+    <button onclick="calc()">=</button>
+    <input type="text" id="result"><br><br>
+    
+
+</div>
+    
+</body>
+</html>
